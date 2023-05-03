@@ -18,42 +18,29 @@ const DisplaySong = (props) => {
   }, []);
 
   return (
-    <div className="SongsTable">
+    <div>
       <table>
         <thead>
           <tr>
-            <tbody>
-              <th>Song</th>
-              <tr>
-                {songs.map((song) => (
-                  <td /*key={song.title}*/>{song.title}</td>
-                ))}
-              </tr>
-              <th>Artist</th>
-              <tr>
-                {songs.map((song) => (
-                  <td /*key={song.title}*/>{song.artist}</td>
-                ))}
-              </tr>
-              <th>Genre</th>
-              <tr>
-                {songs.map((song) => (
-                  <td /*key={song.title}*/>{song.genre}</td>
-                ))}
-              </tr>
-            </tbody>
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Genre</th>
+            <th>Release Date</th>
           </tr>
         </thead>
+        <tbody>
+          {songs.map((song) => (
+            <tr>
+              <td>{song.title}</td>
+              <td>{song.artist}</td>
+              <td>{song.genre}</td>
+              <td>{song.release_date}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </div>
   );
 };
 
-/*{songs.length > 0 && (
-        <ul>
-          {songs.map((song) => (
-            <li key={song.id}>{song.title}</li>
-          ))}
-        </ul>
-          )}*/
 export default DisplaySong;
