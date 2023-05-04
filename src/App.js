@@ -24,7 +24,7 @@ function App() {
     <div>
       {/*<button onClick={() => getAllSongs}>Get All Songs</button>*/}
       <DisplaySong songs={songs} />
-      {/* <AddSong />*/}
+      <AddSong />
       {/*<FilterSongs />*/}
     </div>
   );
