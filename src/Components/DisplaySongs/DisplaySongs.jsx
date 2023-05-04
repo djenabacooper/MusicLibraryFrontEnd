@@ -1,11 +1,11 @@
 import React, { Component, useEffect, useState } from "react";
 //import React, { Component, useState } from "react";
 import "./DisplaySongCss.css";
-import DeleteSongsfromDatabase from "./Edit/DeleteButton";
+//import DeleteSongsfromDatabase from "./Edit/DeleteButton";
 import axios from "axios";
 
-const DisplaySong = (props) => {
-  const [songs, setSongs] = useState([]);
+const DisplaySong = ({ songs }) => {
+  /*const [songs, setSongs] = useState([]);
 
   const fetchSongs = () => {
     fetch("http://127.0.0.1:8000/api/music/")
@@ -20,6 +20,7 @@ const DisplaySong = (props) => {
     fetchSongs();
   }, []);
 
+  */
   const onDelete = (id) => {
     axios.delete(`http://127.0.0.1:8000/api/music/${id}`);
   };

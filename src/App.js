@@ -23,9 +23,9 @@ function App() {
   return (
     <div>
       {/*<button onClick={() => getAllSongs}>Get All Songs</button>*/}
-      <DisplaySong />
-      <AddSong />
-      <FilterSongs />
+      <DisplaySong songs={songs} />
+      {/* <AddSong />*/}
+      {/*<FilterSongs />*/}
     </div>
   );
 }

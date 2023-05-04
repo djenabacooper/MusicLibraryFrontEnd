@@ -14,7 +14,7 @@ const FilterSongs = (props, event) => {
     setFilteredSongs(result);
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     axios("http://127.0.0.1:8000/api/music/")
       .then((response) => {
         setAllSongs(response.data);
@@ -23,7 +23,7 @@ const FilterSongs = (props, event) => {
       .catch((error) => {
         console.log("No songs matching your search");
       });
-  });
+  });*/
 
   useEffect(() => {
     setSearchQuery(() =>
