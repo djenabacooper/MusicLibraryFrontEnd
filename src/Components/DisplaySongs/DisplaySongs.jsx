@@ -2,6 +2,7 @@ import React, { Component, useEffect, useState } from "react";
 //import React, { Component, useState } from "react";
 import "./DisplaySongCss.css";
 import DeleteSongsfromDatabase from "./Edit/DeleteButton";
+import axios from "axios";
 
 const DisplaySong = (props) => {
   const [songs, setSongs] = useState([]);
@@ -18,6 +19,9 @@ const DisplaySong = (props) => {
     fetchSongs();
   }, []);
 
+  const onDelete = (id) => {
+    axios.delete(`http://127.0.0.1:8000/api/music/${id}`);
+  };
   return (
     <div>
       <table>
@@ -38,7 +42,7 @@ const DisplaySong = (props) => {
               <td>{song.album}</td>
               <td>{song.genre}</td>
               <td>{song.release_date}</td>
-              <DeleteSongsfromDatabase></DeleteSongsfromDatabase>
+              <button onClick={() => onDelete(song.id)}>Delete</button>
             </tr>
           ))}
         </tbody>
