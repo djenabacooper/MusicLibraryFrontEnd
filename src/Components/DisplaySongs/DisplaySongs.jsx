@@ -6,6 +6,7 @@ import axios from "axios";
 
 const DisplaySong = (props) => {
   const [songs, setSongs] = useState([]);
+
   const fetchSongs = () => {
     fetch("http://127.0.0.1:8000/api/music/")
       .then((response) => {

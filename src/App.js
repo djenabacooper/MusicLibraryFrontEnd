@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DisplaySong from "./Components/DisplaySongs/DisplaySongs";
 import AddSong from "./Components/AddSongForm/AddSong";
+import FilterSongs from "./Components/SongFilter/SongFilter";
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -24,6 +25,7 @@ function App() {
       {/*<button onClick={() => getAllSongs}>Get All Songs</button>*/}
       <DisplaySong />
       <AddSong />
+      <FilterSongs />
     </div>
   );
 }
