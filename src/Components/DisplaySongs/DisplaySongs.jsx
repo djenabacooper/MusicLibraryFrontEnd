@@ -37,7 +37,7 @@ const DisplaySong = ({ songs }) => {
           </tr>
         </thead>
         <tbody>
-          {songs.map((song) => (
+          {songs?.map((song) => (
             <tr>
               <td>{song.title}</td>
               <td>{song.artist}</td>

@@ -67,7 +67,7 @@ const AddSong = (props, event) => {
           value={genre}
           onChange={(event) => setGenre(event.target.value)}
         ></input>
-        <label>Song Title</label>
+        <label>Release Date</label>
         <input
           type="date"
           value={release_date}
